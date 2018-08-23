@@ -13,6 +13,7 @@ class Player extends React.Component {
                     <div className="planeStatus">{this.props.isAirborne ? "Airborne" : "Grounded"}</div>
                     <img className={this.props.isAirborne ? 'airborne' : 'grounded'} alt="planeIcon" src={planeIcon} />
                 </div>
+                <div className="cutLabel">Cuts: <span className="cutCounter">{this.props.Cuts}</span></div>
                 <div>
                     <button className="cutButton" onClick={() => this.props.ExecuteCut()}>CUT</button>
                     <button className="undoButton" onClick={() => this.props.UndoCut()}>Undo</button>

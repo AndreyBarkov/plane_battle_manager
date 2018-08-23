@@ -2,115 +2,207 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color:white;
-  background-color:#373f4c;
+  color: white;
+  background-color: #373f4c;
 }
-.Dashboard{
-  display:flex;
+
+.Dashboard {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.Timer{
+
+.Timer {
   display: flex;
   justify-content: space-around;
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 3em;
 }
-.planeIcon{
+
+.planeIcon {
   text-align: center;
 }
-.planeIcon img{
-  width:100%;
+
+.planeIcon img {
+  width: 100%;
 }
-.airborne{
+
+.airborne {
   background-color: #b7ffbe;
 }
-.grounded{
+
+.grounded {
   background-color: #ffd1b7;
 }
-.planeStatus{
-  margin-left:auto;
-  margin-right:auto;
+
+.planeStatus {
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   color: black;
   font-size: 2em;
-  z-index:9999;
+  z-index: 9999;
 }
-.flagIcon{
-  max-width:1em;
-  max-height:1em;
-  margin-left:10px;
+
+.flagIcon {
+  max-width: 1em;
+  max-height: 1em;
+  margin-left: 10px;
 }
-.ScoreBoard{
+
+.ScoreBoard {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  font-size:2em;
+  font-size: 2em;
 }
-.advantage{
+
+.advantage {
   color: green;
 }
-.cutButton{
-  padding:30px 0px;
-  width:100%;
-  font-size:4em;
-  background-color:#02cc20;
-  border:none;
-  margin-bottom:10px
+
+.cutButton {
+  padding: 20px 0px;
+  width: 100%;
+  font-size: 4em;
+  background-color: #02cc20;
+  border: none;
+  margin-bottom: 10px
 }
-.cutButton:active{
-  background-color:#008714;
+
+.cutButton:active {
+  background-color: #008714;
 }
-.undoButton{
-  padding:30px 0px;
-  width:100%;
-  font-size:4em;
-  background-color:#ff8011;
-  border:none;
-  margin-bottom:10px
+
+.undoButton {
+  padding: 20px 0px;
+  width: 100%;
+  font-size: 4em;
+  background-color: #ff8011;
+  border: none;
+  margin-bottom: 10px
 }
-.undoButton:active{
+
+.undoButton:active {
   background-color: #a55209;
 }
-.landingApproved{
-  animation:blinkingText 1.0s infinite;
+
+.landingApproved {
+  animation: blinkingText 1.0s infinite;
 }
-@keyframes blinkingText{
-  0%{		background-color: #2ef42e;	}
-	49%{	background-color: #bbf42e;	}
-	50%{	background-color: #f4dc2e;	}
-	99%{	background-color:#f42e2e;	}
-	100%{	background-color: #a8f42e;	}
+
+@keyframes blinkingText {
+  0% {
+    background-color: #2ef42e;
+  }
+  49% {
+    background-color: #bbf42e;
+  }
+  50% {
+    background-color: #f4dc2e;
+  }
+  99% {
+    background-color: #f42e2e;
+  }
+  100% {
+    background-color: #a8f42e;
+  }
 }
-.playerBoard{
- margin:0px 10px;
+
+.playerBoard {
+  margin: 0px 10px;
 }
-.blue{
+
+.blue {
   border: 2px solid #16b5f9;
 }
-.red{
+
+.red {
   border: 2px solid #f42e2e;
 }
 
-.startButton{
+.startButton {
   position: absolute;
-  border:none;
-  padding:20px;
-  left:10px;
-  background-color:blue;
+  border: none;
+  padding: 20px;
+  left: 10px;
+  background-color: white;
 }
 
-.startButton:active{
+.startButton:active {}
 
-}
-.resetButton{
+.resetButton {
   position: absolute;
-  border:none;
-  padding:20px;
-  right:10px;
-  background-color:orange;
+  border: none;
+  padding: 20px;
+  right: 10px;
+  background-color: orange;
 }
-.resetButton:active{
 
+.resetButton:active {}
+
+.cutLabel {
+  padding: 10px;
+  font-size: 2em;
+}
+
+.cutCounter {
+  padding-left: 10x;
+}
+
+.landingCountdown {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.penaltyTab {
+  background-color: #3a4866;
+  border-top: 2px solid white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.penaltyTab:active{
+  background-color: #5e75a5;
+}
+.penaltyTabExpanded{
+
+}
+.penaltyDashboard{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #7c99d6;
+  padding-top:10px;
+  transition: height 500ms 0ms;
+  height:220px;
+}
+.penaltyDashboard.hide{
+  transition: height 500ms 10ms;
+  height: 0px;
+  padding:0;
+}
+.penaltyLabel {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  /*color: #ff2323;*/
+  color:white;
+}
+.playerPenalty{
+
+}
+.penaltyButton{
+  padding: 5px 0px;
+  width: 100%;
+  font-size: 3em;
+  background-color: #ff1111;
+  border: none;
+  margin-bottom: 10px;
+  color:white;
 }
